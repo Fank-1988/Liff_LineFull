@@ -59,16 +59,16 @@
   <script>
       $(document).ready(function() {
            var path = new URL(window.location);
-           var liffId = path.searchParams.get('linkurl'); //พารามิเตอร์ที่ต้องการใส่ เช่นตามตัวอย่างจะใช้ linkurl
+           var 2006483406-9XnE4Zxo = path.searchParams.get('linkurl'); //พารามิเตอร์ที่ต้องการใส่ เช่นตามตัวอย่างจะใช้ linkurl
              liff.init({
-               liffId: "2006181425-4JOY2LgW" //วางLiffId ตรงนี้
+               2006483406-9XnE4Zxo: "2006181425-4JOY2LgW" //วาง2006483406-9XnE4Zxo ตรงนี้
              })
              .then(() => {
                if (liff.isInClient()) {
                  if (liff.getOS() == "ios") {
-                   window.location.replace(""+liffId);              
+                   window.location.replace(""+2006483406-9XnE4Zxo);              
                  } else if (liff.getOS() == "android") {
-                   window.location.replace(""+liffId);
+                   window.location.replace(""+2006483406-9XnE4Zxo);
                  }
 
                  setTimeout(function(){ liff.closeWindow(); }, 3000); //เปลี่ยนเวลาที่ต้องการ Redirect
