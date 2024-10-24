@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <base target="_top">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin - Location Data</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="text-center">Admin - Location Data</h1>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Display Name</th>
+                    <th>Timestamp</th>
+                    <th>Latitude</th>
+                    <th>Longitude</th>
+                    <th>Map</th>
+                </tr>
+            </thead>
+            <tbody id="dataBody">
+                <!-- Data will be inserted here -->
+            </tbody>
+        </table>
+    </div>
+
+    <script>
+    function loadData() {
+        google.script.run.withSuccessHandler(displayData).doGet();
+    }
+
+    function displayData(jsonData) {
+        var data = JSON.parse(jsonData);
+        var tableBody = document.getElementById('dataBody');
+        tableBody.innerHTML = '';
+
+        data.forEach(function(row) {
+            var tr = document.createElement('tr');
+            
+            tr.innerHTML = `
+                <td>${row['Display Name']}</td>
+                <td>${new Date(row['Timestamp']).toLocaleString()}</td>
+                <td>${row['Latitude']}</td>
+                <td>${row['Longitude']}</td>
+                <td><a href="https://www.google.com/maps?q=${row['Latitude']},${row['Longitude']}" target="_blank">ดูแผนที่</a></td>
+            `;
+            
+            tableBody.appendChild(tr);
+        });
+    }
+
+    // Load data when the page is ready
+    document.addEventListener('DOMContentLoaded', loadData);
+    </script>
+</body>
+</html>
