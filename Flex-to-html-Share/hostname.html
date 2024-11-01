@@ -103,7 +103,7 @@
     </script>
     <script>
       (async () => {
-        let liffId = "2006181425-4JOY2LgW"; 
+        let liffId = "2006483406-Y3xqmjOn"; 
         await liff.init({ liffId: liffId });
         liff.ready.then(() => {
           if (!liff.isLoggedIn()) {
@@ -116,7 +116,7 @@
         if (message.footer?.contents?.length > 0) {
           let length = message.footer?.contents.length;
           if (message.footer?.contents[length - 1]?.type == "spacer") {
-            message.footer.contents.push("Developed by ครบเครื่อง เรื่องไอที");
+            message.footer.contents.push("Developed by Dek-kaprog");
             length++
             message.footer.contents[length - 1] =
               message.footer.contents[length - 2];
@@ -132,7 +132,7 @@
           } else {
             message.footer?.contents.push({
               type: "text",
-              text: "Developed by ครบเครื่อง เรื่องไอที",
+              text: "Developed by Dek-kaprog",
               weight: "bold",
               align: "center",
               decoration: "none",
@@ -149,7 +149,7 @@
             contents: [
               {
                 type: "text",
-                text: "Developed by ครบเครื่อง เรื่องไอที",
+                text: "Developed by Dek-kaprog",
                 weight: "bold",
                 align: "center",
                 decoration: "none",
