@@ -54,7 +54,7 @@
                 //document.getElementById("getDecodedIDToken").innerHTML = '<b>Email:</b> ' + liff.getDecodedIDToken().email;
               }).catch(err => console.error(err));
             }
-            liff.init({ liffId: "2006181425-4JOY2LgW" }, () => { // เปลี่ยน LIFF ID 
+            liff.init({ liffId: "2006483406-Y3xqmjOn" }, () => { // เปลี่ยน LIFF ID 
               if (liff.isLoggedIn()) {
                 runApp()
               } else {
@@ -103,7 +103,7 @@
     </script>
     <script>
       (async () => {
-        let liffId = "2006181425-4JOY2LgW"; 
+        let liffId = "2006483406-Y3xqmjOn"; 
         await liff.init({ liffId: liffId });
         liff.ready.then(() => {
           if (!liff.isLoggedIn()) {
@@ -116,13 +116,13 @@
         if (message.footer?.contents?.length > 0) {
           let length = message.footer?.contents.length;
           if (message.footer?.contents[length - 1]?.type == "spacer") {
-            message.footer.contents.push("Developed by ครบเครื่อง เรื่องไอที");
+            message.footer.contents.push("Developed by ");
             length++
             message.footer.contents[length - 1] =
               message.footer.contents[length - 2];
             message.footer.contents[length - 2] = {
               type: "text",
-              text: "Developed by ครบเครื่อง เรื่องไอที",
+              text: "Developed by Dek-kaprog",
               weight: "bold",
               align: "center",
               size: "10px",
@@ -132,7 +132,7 @@
           } else {
             message.footer?.contents.push({
               type: "text",
-              text: "Developed by ครบเครื่อง เรื่องไอที",
+              text: "Developed by Dek-kaprog",
               weight: "bold",
               align: "center",
               decoration: "none",
@@ -149,7 +149,7 @@
             contents: [
               {
                 type: "text",
-                text: "Developed by ครบเครื่อง เรื่องไอที",
+                text: "Developed by Dek-kaprog",
                 weight: "bold",
                 align: "center",
                 decoration: "none",
@@ -180,12 +180,12 @@
               message.contents = setCredit(message.contents);
             }
           } else {
-            message = `${output}\n\nDeveloped by ครบเครื่อง เรื่องไอที`;
+            message = `${output}\n\nDeveloped by Dek-kaprog`;
           }
         } else {
           message = {
             type: "text",
-            text: `${output}\n\nDeveloped by ครบเครื่อง เรื่องไอที`
+            text: `${output}\n\nDeveloped by Dek-kaprog`
           };
         }
         //console.log(message);
@@ -316,7 +316,7 @@
             "contents": [
               {
                 "type": "text",
-                "text": "ครบเครื่อง เรื่องไอที"
+                "text": "Dek-kaprog"
               }
             ]
           }
