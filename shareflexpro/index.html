@@ -54,7 +54,7 @@
                 //document.getElementById("getDecodedIDToken").innerHTML = '<b>Email:</b> ' + liff.getDecodedIDToken().email;
               }).catch(err => console.error(err));
             }
-            liff.init({ liffId: "2006483406-9XnE4Zxo }, () => { // เปลี่ยน LIFF ID 
+            liff.init({ liffId: "2006483406-Y3xqmjOn" }, () => { // เปลี่ยน LIFF ID 
               if (liff.isLoggedIn()) {
                 runApp()
               } else {
@@ -103,7 +103,7 @@
     </script>
     <script>
       (async () => {
-        let liffId = "2006483406-9XnE4Zxo; 
+        let liffId = "2006483406-Y3xqmjOn"; 
         await liff.init({ liffId: liffId });
         liff.ready.then(() => {
           if (!liff.isLoggedIn()) {
